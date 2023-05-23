@@ -1,4 +1,4 @@
-# ⛺ Semana 7#
+# ⛺ Semana 7 #
 
 > 🏕️ [Base de conocimientos.](https://undefinedshell.notion.site/Semana-7-a608475ac8064fc4a114c28eca897c1f)
 
