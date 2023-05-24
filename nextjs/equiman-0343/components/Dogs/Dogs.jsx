@@ -25,7 +25,7 @@ const Dogs = () => {
 
                     return (
                         <>
-                            <div className={styles.card}>
+                            <div className={styles.card} key={key}>
                                 <h2>{ key }</h2>
 
                                 <Image
