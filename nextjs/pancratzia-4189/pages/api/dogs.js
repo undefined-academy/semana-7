@@ -2,10 +2,21 @@ export default async (req, res) => {
   try {
     const response = await fetch('https://dog.ceo/api/breeds/list/all');
     const data = await response.json();
-    const breeds = Object.keys(data.message).slice(0, 10); // Obtén las primeras 10 razas
+    const allBreeds = Object.keys(data.message);
+    
+    const randomBreeds = [];
+    
+    while (randomBreeds.length < 10) {
+      const randomIndex = Math.floor(Math.random() * allBreeds.length);
+      const breed = allBreeds[randomIndex];
+      
+      if (!randomBreeds.includes(breed)) {
+        randomBreeds.push(breed);
+      }
+    }
     
     const dogs = await Promise.all(
-      breeds.map(async (breed) => {
+      randomBreeds.map(async (breed) => {
         const breedResponse = await fetch(`https://dog.ceo/api/breed/${breed}/images/random`);
         const breedData = await breedResponse.json();
         return {
@@ -21,3 +32,4 @@ export default async (req, res) => {
     res.status(500).json({ error: 'Error al obtener las razas de perros.' });
   }
 };
+
