@@ -5,7 +5,7 @@ import SecondaryButton from './SecondaryButton';
 export default function Header() {
   
     return (
-        <div className="bg-dark text-secondary px-4 py-5 text-center">
+        <div className="bg-dark text-secondary px-4 py-5 text-center mb-4">
         <div className="py-5">
           <h1 className="display-5 fw-bold text-white">PANCRADogs</h1>
           <div className="col-lg-6 mx-auto">

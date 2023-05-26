@@ -11,6 +11,15 @@ body {
   min-height: 100vh;
 }
 
+.img_container{
+  max-width: 30rem;
+  max-height: 30rem;
+}
+
+.img_container img{
+  width: 100%;
+}
+
 
 a {
   color: inherit;
