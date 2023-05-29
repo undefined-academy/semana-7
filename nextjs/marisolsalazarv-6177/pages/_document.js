@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html lang="es">
       <Head />
-      <title>Dog Breeds</title>
       <body>
         <Main />
         <NextScript />
