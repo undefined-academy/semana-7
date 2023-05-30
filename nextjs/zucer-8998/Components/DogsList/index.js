@@ -12,13 +12,15 @@ import styles from "./DogList.module.css";
 const DogsList = () => {
   const [breeds, setBreeds] = useState([]);
 
+  const getBreeds = async () => {
+    const { breeds: data } = await get("/api/dog-breeds");
+    setBreeds(data);
+  };
+
   useEffect(() => {
-    const getBreeds = async () => {
-      const { breeds: data } = await get("/api/dog-breeds");
-      setBreeds(data);
-    };
     getBreeds();
   }, []);
+  
   return (
     <div className={styles.container}>
       {breeds.map(({ breed, image }, idx) => (

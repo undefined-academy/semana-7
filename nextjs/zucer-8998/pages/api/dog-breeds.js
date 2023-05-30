@@ -26,7 +26,6 @@ const getFormatBreeds = async (breeds) => {
   const successPromises = resolvedPromises
     .filter(({ status }) => status === SUCCESS_STATUS)
     .map(({ value }) => value);
-  console.log(successPromises);
   return successPromises;
 };
 

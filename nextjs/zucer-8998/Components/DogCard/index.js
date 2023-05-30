@@ -8,7 +8,7 @@ const DogCard = ({ src, breed }) => {
   return (
     <div className={styles.card}>
       <div className={styles.image}>
-        <Image src={src} alt={`${breed} image`} fill />
+        <Image src={src} alt={`${breed} image`} sizes="200px" fill />
       </div>
       <p className={styles.caption}>{breed}</p>
     </div>

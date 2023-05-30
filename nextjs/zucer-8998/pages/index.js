@@ -17,7 +17,9 @@ export default function Home() {
       </Head>
       <main className={inter.className}>
         <div className={styles.container}>
-          <h1>Dog Breeds List!</h1>
+          <div className={styles.title}>
+            <h1>Dog Breeds!</h1>
+          </div>
           <DogsList />
         </div>
       </main>
