@@ -1,6 +1,7 @@
 export default async function handler(req, res) {
   try {
-    const URL = await fetch("https://dog.ceo/api/breeds/image/random/12");
+    const limit = 12;
+    const URL = await fetch(`https://dog.ceo/api/breeds/image/random/${limit}`);
     const data = await URL.json();
     const imgDogs = data.message;
     const dogs = imgDogs.map((image) => {
