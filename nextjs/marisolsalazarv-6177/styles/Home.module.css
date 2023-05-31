@@ -4,13 +4,13 @@
   justify-content: space-between;
   align-items: center;
   border: 1px solid rgba(80, 95, 25, 0.87);
-  /* min-height: 100vh; */
   background-color: aliceblue;
 }
 
 .body {
   display: grid;
   align-items: center;
+  margin: 1px;
   grid-template-columns: repeat(3,auto);
   grid-template-rows: repeat(3,auto);
 }
@@ -44,7 +44,6 @@
     justify-content: space-between;
     align-items: center;
     border: 1px solid rgba(80, 95, 25, 0.87);
-    /* min-height: 100vh; */
     background-color: aliceblue;
   }
 

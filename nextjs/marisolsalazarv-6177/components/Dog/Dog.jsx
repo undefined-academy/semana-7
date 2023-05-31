@@ -1,19 +1,27 @@
-import styles from "@/styles/Home.module.css";
+import Card from "@/components/Card";
+import React, { useEffect, useState } from "react";
 
-function Dog({ title, img }) {
+function Dog() {
+  const [dogs, setDogs] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async (res, req) => {
+      try {
+        const dogs = await fetch("/api/dogs").then((res) => res.json());
+        setDogs(dogs);
+      } catch (error) {
+        return res.status(500).json({ message: error.message });
+      }
+    };
+    fetchData();
+  }, []);
+
   return (
-    <div className={`${styles.main}`}>
-      <h2 id="breeds" className="flex mt-3 justify-center font-bold text-red-800 text-center">{`Raza: ${title}`}</h2>
-      <div className="flex w-full justify-evenly m-auto">
-        <div className="flex w-full h-[380px] md:py-1 px-2 m-2">
-          <img
-            className="flex w-full h-[380px] m-auto md:py-2 sm:py- justify-center"
-            src={img}
-            alt={` ${title} `}
-          />
-        </div>
-      </div>
-    </div>
+    <>
+      {dogs.map((dog, index) => (
+        <Card index={index} img={dog.img} title={dog.title} />
+      ))}
+    </>
   );
 }
 
