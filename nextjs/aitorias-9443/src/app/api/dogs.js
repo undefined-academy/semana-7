@@ -1,4 +1,4 @@
-const fetchDogsBreeds = async () => {
+export const fetchDogsBreeds = async () => {
   const dogsBreedsFetchURL = await fetch("https://dog.ceo/api/breeds/list/all");
   const jsonDogsBreedsFetchURL = await dogsBreedsFetchURL.json();
   const dogsBreed = Object.keys(jsonDogsBreedsFetchURL.message);
@@ -6,7 +6,7 @@ const fetchDogsBreeds = async () => {
   return dogsBreed;
 };
 
-const fetchDogsImages = async (breed) => {
+export const fetchDogsImages = async (breed) => {
   const dogsBreedsImagesFetchURL = await fetch(
     `https://dog.ceo/api/breed/${breed}/images/random`
   );
@@ -18,7 +18,7 @@ const fetchDogsImages = async (breed) => {
   };
 };
 
-const getDogs = async () => {
+export default async function getDogs() {
   const dogsBreeds = await fetchDogsBreeds();
   const dogs = [];
 
@@ -30,7 +30,5 @@ const getDogs = async () => {
     }
   }
 
-  return Promise.all(dogs); // Await all promises to resolve
-};
-
-export default getDogs;
+  return Promise.all(dogs);
+}
