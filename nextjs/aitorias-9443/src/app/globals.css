@@ -124,6 +124,32 @@ h1 {
 }
 
 /* Custom classes */
+.modern-link {
+  position: relative;
+}
+
+.modern-link:hover {
+  text-decoration: none;
+}
+
+.modern-link:after {
+  background-color: var(--link);
+  bottom: 0;
+  content: '';
+  height: 4px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  width: 100%;
+}
+
+.modern-link:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 .mb-4 {
   margin-bottom: 4rem;
 }

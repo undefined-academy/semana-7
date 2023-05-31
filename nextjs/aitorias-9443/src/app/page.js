@@ -8,7 +8,11 @@ export default function Home() {
     <main className={styles.main}>
       <h1 className="text-center">
         Dog App | by:{" "}
-        <a href="https://github.com/aitorias" target="_blank">
+        <a
+          className="modern-link"
+          href="https://github.com/aitorias"
+          target="_blank"
+        >
           Aitorias
         </a>
       </h1>
