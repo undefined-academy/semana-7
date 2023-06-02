@@ -1,32 +1,39 @@
 import Head from "next/head";
-import styles from "../../styles/Dogs.module.css";
-//https://dog.ceo/api/breeds/list/all
-export const getStaticProps = async () => {
-  
-  const res = await fetch('https://jsonplaceholder.typicode.com/users');
-  const data = await res.json();
-
-  return {
-    props: { dogs: data }
-  }
-
-}
+import styles from "../../styles/Dogs.module.css"; 
+import Select from "@/components/Select";
+import Card from "@/components/Card";
+import { useEffect, useState } from "react";
 
 
-const Dogs = ({ dogs }) => {
+
+const Dogs = () => {
+
+  const [dogs, setDogs] = useState([]);
+
+  useEffect(()=>{
+    const fetchData = async()=>{
+      try{
+        const dogs = await fetch("/api/dogs").then((res) => res.json())
+        setDogs(dogs)
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    fetchData()
+  },[])
+
   return (
     <>
       <Head>
         <title>Dogs API | Dog List</title>
         <meta name="keywords" content="dogs" />
       </Head>
-      <div>
-        <h1 className={styles.title}>All Dogs</h1>
-        {dogs.map(dog => ( 
-          <div key={dog.id}>
-            <h3>{dog.name}</h3>
-          </div>
-        ) )}
+      <div className="app">
+      <Select/>
+      
+        {dogs.map((dog,index) =>{
+          return <Card key={index} title={dog.title} img={dog.img} /> 
+        })}
       </div>
     </>
   );
