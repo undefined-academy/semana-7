@@ -46,6 +46,8 @@ input, select {
   box-shadow: 1px 2px 10px rgba(248, 248, 248, 0.2);
   cursor: pointer;
   max-width: 420px; 
+  min-width: 420px;
+  margin-bottom: 30px;
 }
 
 .card:hover {

@@ -12,7 +12,7 @@ export default async function handler(req, res) {
         const res = await fetch(`https://dog.ceo/api/breed/${bread}/images/random`);
         const breadData = await res.json();
         return {
-          title: bread,
+          title: bread.toUpperCase(),
           img: breadData.message,
         }
       })
