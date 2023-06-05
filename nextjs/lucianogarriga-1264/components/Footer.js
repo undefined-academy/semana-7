@@ -1,7 +1,8 @@
 const Footer = () => {
     return ( 
         <div className="footer">
-            <p>Copywright 2023 - Dog List</p>
+            <p>Copywright 2023 - Dog App</p>
+            <p>Luciano Garriga</p>
         </div>
      );
 }

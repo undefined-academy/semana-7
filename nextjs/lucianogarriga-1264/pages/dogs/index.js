@@ -1,9 +1,6 @@
-import Head from "next/head";
-import styles from "../../styles/Dogs.module.css"; 
-import Select from "@/components/Select";
+import Head from "next/head"; 
 import Card from "@/components/Card";
 import { useEffect, useState } from "react";
-
 
 const Dogs = () => {
 
@@ -25,12 +22,12 @@ const Dogs = () => {
   return (
     <>
       <Head>
-        <title>Dogs API | Dog List</title>
+        <title>DogApp | Dog List</title>
         <meta name="keywords" content="dogs" />
       </Head>
       <div className="app">
-      {/* <Select/> */}
-      <h1> List of 10 different random dogs</h1>
+        
+      <h1 className="main-title"> List of 10 random dogs</h1>
         {dogs.slice(0,10).map((dog,index) =>{
           return <Card key={index} title={dog.title} img={dog.img} /> 
         })}

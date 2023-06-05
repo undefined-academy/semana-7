@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
     <Head>
-      <title>Dogs API | Home</title>
+      <title>DogApp | Home</title>
       <meta name='keywords' content='dogs'/>
     </Head>
       <div> 
@@ -15,7 +15,7 @@ export default function Home() {
        <p>Here you can find a lot of dogs breeds.</p>
       <br/>
        <Link href="/dogs"> 
-        <span className={styles.btn}>See Dog Listing here</span>
+        <span className={styles.btn}>See Dogs listing here</span>
        </Link>
    
       </div>
