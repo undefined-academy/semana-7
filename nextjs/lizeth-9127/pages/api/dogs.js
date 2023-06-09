@@ -23,7 +23,7 @@ export default async function handler(request, response) {
   try {
     const urlList = await getUrlList()
     const dogs = urlList.map( url => {  return { breed: getBreedName(url), url: url } } )
-    const breedsList = Object.values(dogs.map( dog => dog.breed))
+    const breedsList = dogs.map( dog => { return dog.breed })
     const dups = getDuplicatedBreeds(breedsList)
     deleteDups(dups,dogs)
     spliceDogs(dogs)
