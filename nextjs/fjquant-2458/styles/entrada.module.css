@@ -1,6 +1,7 @@
 .entrada .img{
-  width: 50px;
+  width: 20%;
   height: 50px;
+  flex-grow: 1;
 }
 
 .entrada .nombre {

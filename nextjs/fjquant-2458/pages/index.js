@@ -26,14 +26,9 @@ const Dogs = () => {
         <div>
           <h1 className={styles.Title}> 10 random dogs Images</h1>
             <div className={styles.container}>
-              {dogs.slice(0, 5).map((dog, index) => {
+              {dogs.slice(0, 10).map((dog, index) => {
                 return <Card key={index} title={dog.title} img={dog.img} />
               })}</div>
-              <div className={styles.container}>
-              {dogs.slice(5, 10).map((dog, index) => {
-                return <Card key={index} title={dog.title} img={dog.img} />
-              })}
-            </div>
        </div>
       </Layout>
     </>
