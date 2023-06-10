@@ -11,7 +11,7 @@ useEffect( () => { getDogs() }, [])
     return (
     <>
     <h1>Dog Listing</h1>
-    <div className="grid-wrapper">{dogs.map( dog => { return <Dog {...dog}/>})}</div>
+    <div className="grid-wrapper">{dogs.map( (dog, index) => { return <Dog key={index} {...dog}/>})}</div>
     </>)}
 
 export default Home
