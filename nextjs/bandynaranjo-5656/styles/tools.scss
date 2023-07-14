@@ -1,0 +1,13 @@
+@use "variables";
+
+@mixin desktop {
+  @media screen and (min-width: variables.$desktop-media-query) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: variables.$tablet-media-query) {
+    @content;
+  }
+}

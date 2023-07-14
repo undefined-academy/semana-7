@@ -1,0 +1,38 @@
+.color-white {
+    color: var(--color-white);
+}
+
+.color-black {
+    color: var(--color-black);
+}
+
+.color-dark-grey{
+    color: var(--color-dark-grey);
+}
+
+.heading-sm {
+    font-size: 23px;
+    line-height: 29px;
+}
+
+.heading-lg {
+    font-size: 40px;
+    line-height: 46px;
+}
+
+.heading-xl {
+    font-size: 57px;
+    line-height: 63px;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.heading-align-center {
+    text-align: center;
+}
+
+.heading-align-left {
+    text-align: left;
+}
