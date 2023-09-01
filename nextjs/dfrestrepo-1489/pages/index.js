@@ -1,4 +1,5 @@
 import { Card } from "@/components/card/Card";
+import { Loader } from "@/components/loader/Loader";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 
@@ -43,14 +44,17 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="dog-list">
-          {dogList[1] ? articlesMap : "NO TENGO PERROSS"}
+        {dogList[1] ? "" : <Loader />}
+        <section className={dogList[1] ? "dog-list active" : "dog-list"}>
+          {articlesMap}
         </section>
 
         <footer>
           <p>
             Practice week 7 of undefined Shell bootcamp for{" "}
-            <a href="https://github.com/chapurestrepo" target="_blank">Daniel Restrepo</a>
+            <a href="https://github.com/chapurestrepo" target="_blank">
+              Daniel Restrepo
+            </a>
           </p>
         </footer>
       </main>
