@@ -1,0 +1,37 @@
+.card{
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+}
+
+.card figure,
+.card figure img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.card figure img{
+    object-fit: cover;
+}
+
+.card-chip-name{
+    position: absolute;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    bottom: 16px;
+    left: 16px;
+    border-radius: 24px;
+    padding: 4px 16px;
+    transform: translate(50px, 0px);
+    opacity: 0;
+    transition: .4s;
+}
+
+.card:hover .card-chip-name{
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: .4s;
+}

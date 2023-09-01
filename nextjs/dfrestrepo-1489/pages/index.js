@@ -1,3 +1,5 @@
+import { Card } from "@/components/card/Card";
+import Head from "next/head";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -14,16 +16,44 @@ export default function Home() {
   }, []);
 
   const articlesMap = dogList.map((post) => (
-    <div className="article">
-      <h3>Nombre: {post.name}</h3>
-      <img src={post.image} />
-    </div>
+    <Card key={post.name} image={post.image} text={post.name}></Card>
   ));
 
   return (
     <>
-      <h1>Hola dogs</h1>
-      {articlesMap}
+      <Head>
+        <title>GuessTheBreed</title>
+        <meta name="description" content="guessTheBreed" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/guessTheBreed-icon.svg" />
+      </Head>
+
+      <main>
+        <header>
+          <img src="/guessTheBreed-logo.svg" />
+        </header>
+
+        <section className="intro-description">
+          <p className="size-m">Are you a dog lover?</p>
+          <p className="t-center">
+            in this site you can check it.{" "}
+            <span className="color-primary">
+              Discover the breed by moseover on the dogs images.
+            </span>
+          </p>
+        </section>
+
+        <section className="dog-list">
+          {dogList[1] ? articlesMap : "NO TENGO PERROSS"}
+        </section>
+
+        <footer>
+          <p>
+            Practice week 7 of undefined Shell bootcamp for{" "}
+            <a href="https://github.com/chapurestrepo" target="_blank">Daniel Restrepo</a>
+          </p>
+        </footer>
+      </main>
     </>
   );
 }

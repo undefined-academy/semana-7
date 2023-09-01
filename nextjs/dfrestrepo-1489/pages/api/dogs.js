@@ -15,7 +15,7 @@ export default async function handler(req, res) {
       ).then((data) => data.json());
 
       return {
-        name: dog,
+        name: dog.charAt(0).toUpperCase() + dog.slice(1),
         image: `${dogImages.message}`
       };
     })
