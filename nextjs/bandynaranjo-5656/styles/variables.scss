@@ -1,0 +1,13 @@
+// Custom properties (CSS Variables)
+:root {
+    --principal-color: #8969789f; 
+    --secondary-color: #aac0af;
+    --accent-color: #92a697;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-dark-grey: #333;
+}
+
+// Media Query
+$tablet-media-query: 768px;
+$desktop-media-query: 992px;
