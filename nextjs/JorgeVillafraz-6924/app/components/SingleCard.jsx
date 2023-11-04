@@ -7,13 +7,7 @@ const SingleCard = ({
 }) => {
   return (
     <article className="mb-10 overflow-hidden rounded-lg bg-slate-600 shadow-2xl">
-      <Image
-        src={image}
-        alt="dog"
-        width={500}
-        height={500}
-        className="w-full"
-      />
+      <Image src={image} alt="dog" width={300} height={300} className="" />
       <section className="p-8 text-left sm:p-9 md:p-7 xl:p-9">
         <h3>
           <a
