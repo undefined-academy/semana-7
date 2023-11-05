@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ImageWithFallback from "./ImageWithFallback";
 const SingleCard = ({
   image = "https://images.dog.ceo/breeds/terrier-lakeland/n02095570_4188.jpg",
