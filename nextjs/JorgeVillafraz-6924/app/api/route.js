@@ -37,7 +37,7 @@ async function getDogsDetails(breeds) {
   return Promise.all(dataMapped);
 }
 
-async function getDogsData() {
+export async function getDogsData() {
   const allBreeds = await getDogs();
   const arrayDogsBreeds = getBreeds(allBreeds);
   const randomBreeds = getRandomBreeds(arrayDogsBreeds);

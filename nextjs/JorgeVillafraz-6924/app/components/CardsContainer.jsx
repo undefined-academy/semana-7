@@ -2,11 +2,14 @@
 import { useEffect, useState } from "react";
 import SingleCard from "./SingleCard";
 
-const CardContainer = () => {
+function CardContainer() {
   const [dogs, setDogs] = useState([]);
+
   useEffect(() => {
     const getDogs = async () => {
-      const response = await fetch("/api");
+      const response = await fetch("/api", {
+        cache: "no-store",
+      });
       const data = await response.json();
       setDogs(data);
     };
@@ -28,6 +31,6 @@ const CardContainer = () => {
       </main>
     </>
   );
-};
+}
 
 export default CardContainer;
